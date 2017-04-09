@@ -1,0 +1,39 @@
+{
+  "name": "gulp-json-structure-validator",
+  "version": "1.0.0",
+  "description": "A json structure validator that has an option to check for forgotten keys",
+  "keywords": [
+    "jsonvalidator",
+    "json",
+    "validator",
+    "validation",
+    "gulpplugin",
+    "structure" ,
+    "scheme"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "diff-json-structure": "^1.0.8",
+    "gulp-util": "^3.0.7",
+    "map-stream": "0.0.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jromay/gulp-json-structure-validator"
+  },
+  "author": "Javi Romay (jromay)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jromay/gulp-json-structure-validator/issues"
+  },
+  "homepage": "https://github.com/jromay/gulp-json-structure-validator"
+}
