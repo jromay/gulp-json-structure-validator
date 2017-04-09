@@ -8,7 +8,7 @@
     "validator",
     "validation",
     "gulpplugin",
-    "structure" ,
+    "structure",
     "scheme"
   ],
   "main": "index.js",
@@ -28,12 +28,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jromay/gulp-json-structure-validator"
+    "url": "git+https://github.com/jromay/gulp-json-structure-validator.git"
   },
   "author": "Javi Romay (jromay)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jromay/gulp-json-structure-validator/issues"
   },
-  "homepage": "https://github.com/jromay/gulp-json-structure-validator"
+  "homepage": "https://github.com/jromay/gulp-json-structure-validator",
+  "directories": {
+    "test": "test"
+  }
 }

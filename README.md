@@ -5,6 +5,7 @@ A gulp wrapper around [diff-json-structure](https://github.com/IndigoUnited/node
 
 ## Install
 `npm install gulp-json-structure-validator`
+
 ## Usage
 ```js
 var path = require('path');
