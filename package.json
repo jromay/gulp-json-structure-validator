@@ -1,7 +1,7 @@
 {
   "name": "gulp-json-structure-validator",
-  "version": "1.0.0",
-  "description": "A json structure validator that has an option to check for forgotten keys",
+  "version": "1.0.2",
+  "description": "A json structure validator that has an option to check for forgotten keys on json files (configurations, i18n, ...).",
   "keywords": [
     "jsonvalidator",
     "json",
@@ -13,7 +13,6 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "diff-json-structure": "^1.0.8",
     "gulp-util": "^3.0.7",
     "map-stream": "0.0.6"
   },

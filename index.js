@@ -1,16 +1,17 @@
 var mapStream = require('map-stream');
 var PluginError = require('gulp-util').PluginError;
-var diff = require('diff-json-structure');
 var fs = require('fs');
 module.exports = gulpJsonStructureValidator;
 
 function jsondif(a,b,pre){
     var dev = '';
-    for (var prop in a) {
+	  for (var prop in a) {
         if(b[prop]==undefined){
             dev += pre+prop+'\n';
         } else {
-            dev += jsondif(a[prop],b[prop],pre+prop+'.');
+			if (typeof b[prop] === 'object')  {
+				dev += jsondif(a[prop],b[prop],pre+prop+'.');
+			}
         }
     }
     return dev;
@@ -36,12 +37,12 @@ function gulpJsonStructureValidator(option) {
           var content = file.contents;
           var error;
           if (content) {
-            var e = jsondif(templateObject, JSON.parse(content), '');
+			var e = jsondif(templateObject, JSON.parse(content), '');
             if (e != '') {
               error = new PluginError('gulp-json-structure-validator',{
                 name: 'JSON Structure Validate Error',
                 filename: file.path,
-                message: e
+                message: '\nForgotten in "' + file.path + '"' + ':\n' +e
                 });
             }
           }
